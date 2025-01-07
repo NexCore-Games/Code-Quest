@@ -1,0 +1,424 @@
+body {
+  background-color: #1c1c1c;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 50px;
+  color: #00f7ff;
+  text-shadow: 0 0 20px #00f7ff, 0 0 30px #ff00d4;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #00f7ff;
+  color: #00f7ff;
+  padding: 15px 30px;
+  margin: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #00f7ff;
+  color: #1c1c1c;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  justify-content: center;
+  margin: 30px;
+}
+
+.number-grid button {
+  font-size: 25px;
+  padding: 15px;
+  background-color: #ff00d4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.number-grid button:hover {
+  background-color: #00f7ff;
+}
+.level-display {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* Level 2 Submit Button */
+#number-grid button {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#number-grid button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  transform: scale(1.05); /* Subtle scaling effect */
+}
+/* Maze container styling */
+#maze-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden; /* Ensures the cover stays within bounds */
+  border: 2px solid #333;
+}
+
+/* Cover layer to obscure maze */
+.maze-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  pointer-events: none; /* Allows user to interact with cells underneath */
+}
+
+/* Small openings in the cover to mimic "fog" effect */
+.cover-hole {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%; /* Circular holes */
+  pointer-events: auto; /* Enable clicks through holes */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glowing effect */
+}
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+}
+.storyline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a2e);
+  color: #00ffc6;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.holographic-guide {
+  margin-bottom: 20px;
+}
+
+.pixel-guide {
+  width: 200px;
+  border: 2px solid #00ffc6;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffc6;
+}
+
+.guide-dialogue {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #ffffff;
+  text-shadow: 0 0 5px #00ffc6;
+}
+
+.intro-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.glow-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #0f0f0f;
+  background: #00ffc6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ffc6;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow-button:hover {
+  background: #ffffff;
+  color: #00ffc6;
+  box-shadow: 0 0 25px #00ffc6;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.menu {
+  text-align: center;
+}
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+}
+button {
+  margin: 10px;
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+button:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 15px #0ff, 0 0 25px #0ff, 0 0 35px #0ff, 0 0 50px #0ff;
+}
+button:active {
+  transform: scale(0.98);
+}
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  background: radial-gradient(circle, #0f0f3d, #060617);
+  overflow: hidden;
+}
+
+/* Intro Container */
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.intro-text {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 0, 255, 0.5);
+  max-width: 600px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+/* Story Text */
+.story {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #c0ffee;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+/* Pixel Dialog */
+.pixel-dialog {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ff8c00;
+  text-shadow: 0 0 5px #ff4500;
+}
+
+/* Button */
+#continueButton {
+  background: linear-gradient(45deg, cyan, blue);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-shadow: 0 0 10px white;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#continueButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.maze-grid {
+  filter: blur(5px);
+  transition: filter 0.5s ease;
+}
+
+.maze-grid.active {
+  filter: blur(0px);
+}
+/* Updated Grid Style */
+.maze-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  position: relative;
+}
+
+/* Individual Box Styling */
+.maze-grid div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: #222;
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effects */
+.maze-grid div:hover {
+  background: #333;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+/* Hidden Finish */
+.finish-box {
+  background: #111; /* Initially invisible */
+  text-indent: -9999px; /* Hides text */
+  overflow: hidden;
+}
+
+.revealed {
+  background: #0f0 !important; /* Revealed state */
+  text-indent: 0; /* Shows text */
+}
+
+/* Decoy Bugs */
+.bug-box {
+  background: #900;
+}
+
+.bug-box:hover {
+  background: #c00;
+}
+
+/* Fog Overlay */
+.maze-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  pointer-events: none;
+  z-index: 2;
+}
+#side-panel {
+  width: 250px;
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px;
+  border-left: 2px solid #00ffcc;
+}
+
+#player-stats {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #00ffcc;
+}
+
+#inventory ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#inventory ul li {
+  background-color: #2a2a3d;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 3px;
+}
+
+#player-hints {
+  margin-top: 20px;
+}
+
+#hint-button {
+  background-color: #00ffcc;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+.modal-content {
+  text-align: center;
+}
+.modal.show {
+  display: block;
+}
